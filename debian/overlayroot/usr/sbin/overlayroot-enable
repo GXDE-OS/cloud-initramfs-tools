@@ -1,0 +1,29 @@
+#!/bin/sh
+
+set -e
+
+error() {
+
+   printf "ERROR: $@\n" 1>&2
+}
+
+fail() {
+
+   [ $# -eq 0 ] || error "$@"; exit 1
+}
+
+info() {
+
+   printf "INFO: $@\n" 1>&2
+}
+
+overlay=$(grep -m1 "^overlayroot / overlay " /proc/mounts) || overlay=
+
+if [ -n "${overlay}" ]; then
+
+   fail "overlayroot is enabled already"
+else
+   sed -i 's:overlayroot=".*":overlayroot="tmpfs\:swap=1\,recurse=0":' /etc/overlayroot.conf
+   info "overlayroot is enabled now"
+   info "please reboot"
+fi

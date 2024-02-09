@@ -1,0 +1,9 @@
+debian/tmp/etc/overlayroot.conf
+debian/tmp/etc/update-motd.d
+debian/tmp/usr/sbin/overlayroot-chroot
+debian/tmp/usr/sbin/overlayroot-enable
+debian/tmp/usr/sbin/overlayroot-disable
+debian/tmp/usr/share/initramfs-tools/hooks/overlayroot
+debian/tmp/usr/share/initramfs-tools/scripts/init-bottom/overlayroot
+debian/tmp/usr/share/initramfs-tools/conf-hooks.d/overlayroot
+debian/tmp/usr/share/man/man8/overlayroot-chroot.8

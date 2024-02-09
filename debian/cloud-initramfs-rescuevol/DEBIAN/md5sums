@@ -1,0 +1,5 @@
+213f7cda911239a108c2c9eb87c9cc8d  usr/share/doc/cloud-initramfs-rescuevol/README
+a86fb0741b3eb84609bbfe6845b4da71  usr/share/doc/cloud-initramfs-rescuevol/changelog.gz
+fede884dc2a00de53599bffe6a6a40f5  usr/share/doc/cloud-initramfs-rescuevol/copyright
+337cb838971fdea3ac4262e3e6ffa18b  usr/share/initramfs-tools/hooks/rescuevol
+0164a6ea34f8605b219842f9852c40eb  usr/share/initramfs-tools/scripts/local-premount/rescuevol

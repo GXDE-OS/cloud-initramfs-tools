@@ -1,0 +1,6 @@
+cloud-initramfs-copymods_0.27deepin1.4_all.deb admin extra
+cloud-initramfs-dyn-netconf_0.27deepin1.4_all.deb admin extra
+cloud-initramfs-growroot_0.27deepin1.4_all.deb admin extra
+cloud-initramfs-rescuevol_0.27deepin1.4_all.deb admin extra
+cloud-initramfs-tools_0.27deepin1.4_amd64.buildinfo admin extra
+overlayroot_0.27deepin1.4_all.deb admin extra

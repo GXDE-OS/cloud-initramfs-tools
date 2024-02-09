@@ -1,0 +1,30 @@
+#!/bin/sh
+
+set -e
+
+error() {
+
+   printf "ERROR: $@\n" 1>&2
+}
+
+fail() {
+
+   [ $# -eq 0 ] || error "$@"; exit 1
+}
+
+info() {
+
+   printf "INFO: $@\n" 1>&2
+}
+
+overlay=$(grep -m1 "^overlayroot / overlay " /proc/mounts) || overlay=
+
+if [ -n "${overlay}" ]; then
+
+   overlayroot-chroot sed -i 's:overlayroot=".*":overlayroot="":' /etc/overlayroot.conf
+   info "overlayroot is disabled now"
+   info "please reboot"
+else
+
+   fail "overlayroot is disabled already"
+fi
